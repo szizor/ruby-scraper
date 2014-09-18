@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">URL</Data></Cell>
+        <Cell><Data ss:Type="String">Category</Data></Cell>
+        <Cell><Data ss:Type="String">subcategory</Data></Cell>
+        <Cell><Data ss:Type="String">year_business_began</Data></Cell>
+        <Cell><Data ss:Type="String">year_opportunity_offered</Data></Cell>
+        <Cell><Data ss:Type="String">address</Data></Cell>
+        <Cell><Data ss:Type="String">city</Data></Cell>
+        <Cell><Data ss:Type="String">state</Data></Cell>
+        <Cell><Data ss:Type="String">zip</Data></Cell>
+        <Cell><Data ss:Type="String">phone</Data></Cell>
+        <Cell><Data ss:Type="String">employees</Data></Cell>
+        <Cell><Data ss:Type="String">licences</Data></Cell>
+        <Cell><Data ss:Type="String">type_of_oportunity</Data></Cell>
+        <Cell><Data ss:Type="String">where_seeking_associates</Data></Cell>
+        <Cell><Data ss:Type="String">start_up_costs</Data></Cell>
+      </Row>
+    <% @franchises.each do |item| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= item.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.url %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.category %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.subcategory %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.year_business_began %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.year_opportunity_offered %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.address %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.city %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.state %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.zip %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.phone %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.employees %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.licences %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.type_of_oportunity %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.where_seeking_associates %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.start_up_costs %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

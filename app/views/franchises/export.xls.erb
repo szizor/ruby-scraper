@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="Number">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">URL</Data></Cell>
+        <Cell><Data ss:Type="String">Price</Data></Cell>
+        <Cell><Data ss:Type="String">Product</Data></Cell>
+        <Cell><Data ss:Type="String">Web</Data></Cell>
+        <Cell><Data ss:Type="String">Phone</Data></Cell>
+        <Cell><Data ss:Type="String">Address</Data></Cell>
+      </Row>
+    <% @franchises.each do |item| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= item.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.url %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.price %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.product %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.web %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.phone %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= item.address %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
