@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem "rails", ">= 3.2.17"
 gem 'mysql2', '0.3.11'
 
 # Gems used only for assets and not required
@@ -12,7 +12,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "nokogiri", '1.5.6'
+gem "nokogiri", ">= 1.8.2"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
