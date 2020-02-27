@@ -12,7 +12,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem "nokogiri", ">= 1.8.2"
+gem "nokogiri", ">= 1.10.8"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
